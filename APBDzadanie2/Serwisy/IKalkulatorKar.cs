@@ -2,5 +2,5 @@
 
 public interface IKalkulatorKar
 {
-    float ObliczKare(DateTime planowanaDataZwrotu, DateTime faktycznaDataZwrotu);
+     decimal ObliczKare(DateTime planowanaDataZwrotu, DateTime faktycznaDataZwrotu);
 }
