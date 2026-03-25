@@ -7,7 +7,7 @@ namespace APBDzadanie2.Serwisy;
 
 public interface ISerwisWypozyczen
 {
-    void UtworzWypozyczenie(Osoba osoba, Modele.Sprzet sprzet, DateTime odKiedy, DateTime doKiedy);
+    void UtworzWypozyczenie(Osoba osoba, Sprzet sprzet, DateTime odKiedy, DateTime doKiedy);
     void ZwrocSprzet(int idWypozyczenia, DateTime dataZwrotu);
     void AnulujWypozyczenie(int idWypozyczenia);
     List<Wypozyczenie> PobierzWypozyczeniaOsoby(Osoba osoba);

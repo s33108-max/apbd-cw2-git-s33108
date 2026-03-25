@@ -12,7 +12,7 @@ public class Wypozyczenie  (Sprzet sprzet, Osoba osoba, DateTime from, DateTime 
    
      public DateTime? ActualReturnDate { get;  set; }//?moze być null, dateTime typ danych do przechowywania godziny i daty
     
-     public double PenaltyFee { get;  set; }
+     public decimal PenaltyFee { get;  set; }
     
      public bool IsCancelled { get;  set; }
     
@@ -26,7 +26,7 @@ public class Wypozyczenie  (Sprzet sprzet, Osoba osoba, DateTime from, DateTime 
          IsCancelled = true;
      }
 
-     public void OddanieSprzetu(DateTime returnDate, double penaltyFee)
+     public void OddanieSprzetu(DateTime returnDate, decimal penaltyFee)
      {
          if (IsCancelled)
              throw new InvalidOperationException("Nie można zwrócić anulowanego wypożyczenia.");
