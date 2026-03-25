@@ -1,4 +1,4 @@
-﻿namespace APBDzadanie2;
+﻿namespace APBDzadanie2.Enums;
 
 public enum StatusSprzetu
 {
