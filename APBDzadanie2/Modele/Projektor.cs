@@ -1,4 +1,4 @@
-﻿namespace APBDzadanie2;
+﻿namespace APBDzadanie2.Modele;
 
 public class Projektor (string nazwa, string marka, int rokKupienia,int jasnoscLumeny, bool posiadaRzytowanieBezprzewodowe) : Sprzet(nazwa,marka, rokKupienia)
 {

@@ -1,4 +1,4 @@
-﻿namespace APBDzadanie2;
+﻿namespace APBDzadanie2.Modele;
 
 public abstract class Sprzet(string nazwa,string marka, int rokKupienia)
 {

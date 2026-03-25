@@ -1,4 +1,4 @@
-﻿namespace APBDzadanie2;
+﻿namespace APBDzadanie2.Modele;
 
 public class Student (string imie, string nazwisko, string typUzytkownika, string s) : Osoba(imie, nazwisko, typUzytkownika)
 {

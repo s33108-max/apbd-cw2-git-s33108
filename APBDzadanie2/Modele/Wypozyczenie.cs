@@ -1,4 +1,4 @@
-﻿namespace APBDzadanie2;
+﻿namespace APBDzadanie2.Modele;
 
 public class Wypozyczenie  (Sprzet sprzet, Osoba osoba, DateTime from, DateTime to)
 {
@@ -16,7 +16,7 @@ public class Wypozyczenie  (Sprzet sprzet, Osoba osoba, DateTime from, DateTime 
     
      public bool IsCancelled { get;  set; }
     
-     public bool IsReturnedOnTime => ActualReturnDate.HasValue && ActualReturnDate.Value <= To;
+     public bool IsReturnedOnTime => ActualReturnDate.HasValue && ActualReturnDate.Value <= To; // hasvalue czy nie jest nullem
     
      public void Cancel()
      {
@@ -26,7 +26,7 @@ public class Wypozyczenie  (Sprzet sprzet, Osoba osoba, DateTime from, DateTime 
          IsCancelled = true;
      }
 
-     public void MarkAsReturned(DateTime returnDate, decimal penaltyFee)
+     public void OddanieSprzetu(DateTime returnDate, double penaltyFee)
      {
          if (IsCancelled)
              throw new InvalidOperationException("Nie można zwrócić anulowanego wypożyczenia.");

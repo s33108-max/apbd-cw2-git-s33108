@@ -1,4 +1,4 @@
-﻿namespace APBDzadanie2;
+﻿namespace APBDzadanie2.Modele;
 
 public class Laptop(string nazwa,string marka, int rokKupienia, string systemOperacyjny, double iloscCali) : Sprzet(nazwa,marka, rokKupienia)
 {

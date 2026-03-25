@@ -1,4 +1,4 @@
-﻿namespace APBDzadanie2;
+﻿namespace APBDzadanie2.Modele;
 
 public abstract class Osoba (string imie, string nazwisko, string typUzytkownika)
 {
