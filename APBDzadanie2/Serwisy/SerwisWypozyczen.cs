@@ -11,7 +11,7 @@ public class SerwisWypozyczen : ISerwisWypozyczen
     private readonly List<Wypozyczenie> _wypozyczenia = [];
     private readonly IKalkulatorKar _kalkulatorKar;
 
-    // Wstrzykujemy kalkulator kar do serwisu
+    
     public SerwisWypozyczen(IKalkulatorKar kalkulatorKar)
     {
         _kalkulatorKar = kalkulatorKar;
@@ -19,7 +19,7 @@ public class SerwisWypozyczen : ISerwisWypozyczen
 
     public void UtworzWypozyczenie(Osoba osoba, Sprzet sprzet, DateTime odKiedy, DateTime doKiedy)
     {
-        // Używamy Twojego ENUMA!
+        
         if (sprzet.Status != StatusSprzetu.DOSTEPNY)
         {
             throw new WyjatekSprzetNiedostepny(sprzet.Id);
@@ -37,7 +37,7 @@ public class SerwisWypozyczen : ISerwisWypozyczen
         var noweWypozyczenie = new Wypozyczenie(sprzet, osoba, odKiedy, doKiedy);
         _wypozyczenia.Add(noweWypozyczenie);
         
-        // Sprzęt został wypożyczony, zmieniamy status na niedostępny
+        
         sprzet.Status = StatusSprzetu.NIEDOSTEPNY; 
     }
 
@@ -50,13 +50,13 @@ public class SerwisWypozyczen : ISerwisWypozyczen
             throw new WyjatekBrakWypozyczenia(idWypozyczenia);
         }
 
-        // Obliczamy karę za pomocą kalkulatora
+        
         decimal kara = _kalkulatorKar.ObliczKare(wypozyczenie.To, dataZwrotu);
 
-        // Używamy metody z Twojej klasy Wypozyczenie
+       
         wypozyczenie.OddanieSprzetu(dataZwrotu, kara);
         
-        // Sprzęt wraca do wypożyczalni
+       
         wypozyczenie.Sprzet.Status = StatusSprzetu.DOSTEPNY;
     }
 
@@ -70,7 +70,7 @@ public class SerwisWypozyczen : ISerwisWypozyczen
         }
         
         wypozyczenie.Cancel();
-        // Zwalniamy sprzęt po anulowaniu
+        
         wypozyczenie.Sprzet.Status = StatusSprzetu.DOSTEPNY; 
     }
 
