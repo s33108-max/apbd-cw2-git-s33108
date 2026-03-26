@@ -1,4 +1,4 @@
 ﻿namespace APBDzadanie2.Wyjatki;
 
 public class WyjatekSprzetNiedostepny(int id)
-    : Exception($"sprzet o {id} jest niedostepny");
+    : Exception($"sprzet o id {id} jest niedostepny");
