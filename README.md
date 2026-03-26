@@ -11,3 +11,5 @@ StatusSprzetu jest w enumie przez co ogranicza to błędy.
 'SerwisWypozyczen' zajmuje się natomiast procesem wypożyczania. Nie przejmuje się tym, w jaki sposób zaimplementowano listę sprzętu, ani jak dokładnie liczy się matematycznie karę za opóźnienie (to robi kalkulat).
 Obsługa błędów za pomocą dedykowanych wyjątków a nie w klasie.
 Niski sprzężenie widać po wykorzystywaniu interfejsów. np: SerwisWypozyczen, który w swoim konstruktorze przyjmuje interfejs IKalkulatorKar, a nie konkretną klasę kalkulatora.
+
+instrukcja uruchomienia: skoipiować repozytorium. otworzyć APBDzadanie2.sln w środowisku IDE i potem uruchomić aplikacje.
